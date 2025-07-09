@@ -63,7 +63,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             ping_result.status_code, 200,
             'ping hrls returns unexpected status')
         self.assertEqual(
-            ping_result.content, 'OK\n',
+            ping_result.content.decode(), 'OK\n',
             'ping hrls returns unexpected response')
 
     def test_search_handle_by_non_existing_key_value_1(self):
@@ -74,7 +74,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by non existing url key returns unexpected status')
         self.assertEqual(
-            search_result.content, '[]',
+            search_result.content.decode(), '[]',
             'search handle by non existing url key returns unexpected response')
 
     def test_search_handle_by_non_existing_key_value_2(self):
@@ -85,7 +85,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by non existing url key returns unexpected status')
         self.assertEqual(
-            search_result.content, '[]',
+            search_result.content.decode(), '[]',
             'search handle by non existing url key returns unexpected response')
 
     def test_search_handle_by_non_existing_key_value_3(self):
@@ -96,7 +96,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by non existing url key returns unexpected status')
         self.assertEqual(
-            search_result.content, '[]',
+            search_result.content.decode(), '[]',
             'search handle by non existing url key returns unexpected response')
 
     def test_search_handle_by_prohibited_key_value_1(self):
@@ -107,7 +107,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 500,
             'search hrls by prohibited key returns unexpected status')
         self.assertEqual(
-            search_result.content, 'Searching via HS_SECKEY entries is not allowed!',
+            search_result.content.decode(), 'Searching via HS_SECKEY entries is not allowed!',
             'search handle by prohibited key returns unexpected response')
 
     def test_search_handle_by_prohibited_key_value_2(self):
@@ -118,7 +118,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 500,
             'search hrls by prohibited key returns unexpected status')
         self.assertEqual(
-            search_result.content, 'Searching via HS_SECKEY entries is not allowed!',
+            search_result.content.decode(), 'Searching via HS_SECKEY entries is not allowed!',
             'search handle by prohibited key returns unexpected response')
 
     def test_search_handle_by_prohibited_key_value_3(self):
@@ -129,7 +129,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 500,
             'search hrls by prohibited key returns unexpected status')
         self.assertEqual(
-            search_result.content, 'Searching via HS_SECKEY entries is not allowed!',
+            search_result.content.decode(), 'Searching via HS_SECKEY entries is not allowed!',
             'search handle by prohibited key returns unexpected response')
 
     def test_search_handle_by_existing_key_value_1(self):
@@ -140,7 +140,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by existing key value returns unexpected status')
         self.assertEqual(
-            search_result.content, '["'+self.prefix+'/HRLS_CHECK_HANDLE_000001"]',
+            search_result.content.decode(), '["'+self.prefix+'/HRLS_CHECK_HANDLE_000001"]',
             'search handle by existing key value returns unexpected response')
 
     def test_search_handle_by_existing_key_value_2(self):
@@ -151,7 +151,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by existing key value returns unexpected status')
         self.assertEqual(
-            search_result.content, '["'+self.prefix+'/HRLS_CHECK_HANDLE_000001"]',
+            search_result.content.decode(), '["'+self.prefix+'/HRLS_CHECK_HANDLE_000001"]',
             'search handle by existing key value returns unexpected response')
 
     def test_search_handle_by_existing_key_value_3(self):
@@ -162,7 +162,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by existing key value returns unexpected status')
         self.assertEqual(
-            search_result.content, '["'+self.prefix+'/HRLS_CHECK_HANDLE_000001"]',
+            search_result.content.decode(), '["'+self.prefix+'/HRLS_CHECK_HANDLE_000001"]',
             'search handle by existing key value returns unexpected response')
 
     def test_search_handle_by_existing_key_value_limit_1(self):
@@ -175,7 +175,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange(1, limit+1):
+        for x in range(1, limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -194,7 +194,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange(1, limit+1):
+        for x in range(1, limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -213,7 +213,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange(1, limit+1):
+        for x in range(1, limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -232,7 +232,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange(1, limit+1):
+        for x in range(1, limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -252,7 +252,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange((page*limit)+1, (page*limit)+limit+1):
+        for x in range((page*limit)+1, (page*limit)+limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -272,7 +272,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange((page*limit)+1, (page*limit)+limit+1):
+        for x in range((page*limit)+1, (page*limit)+limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -292,7 +292,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange((page*limit)+1, (page*limit)+limit+1):
+        for x in range((page*limit)+1, (page*limit)+limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -312,7 +312,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange((page*limit)+1, (page*limit)+limit+1):
+        for x in range((page*limit)+1, (page*limit)+limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -332,7 +332,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange((page*limit)+1, (page*limit)+limit+1):
+        for x in range((page*limit)+1, (page*limit)+limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -352,7 +352,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange((page*limit)+1, (page*limit)+limit+1):
+        for x in range((page*limit)+1, (page*limit)+limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -372,7 +372,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange((page*limit)+1, (page*limit)+limit+1):
+        for x in range((page*limit)+1, (page*limit)+limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -423,7 +423,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by existing key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
-        for i in xrange(1, 10):
+        for i in range(1, 10):
             counter = "%06d" % i
             self.assertEqual(
                 search_result_list[str(self.prefix)+'/HRLS_CHECK_HANDLE_'+str(counter)][0]['type'], 'URL',
@@ -458,7 +458,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by existing key value returns unexpected status: %s' % search_result.status_code)
         search_result_list = json.loads(search_result.content)
-        for i in xrange( 99999, 100001):
+        for i in range( 99999, 100001):
             counter = "%06d" % i
             self.assertEqual(
                 search_result_list[str(self.prefix)+'/HRLS_CHECK_HANDLE_'+str(counter)][0]['type'], 'URL',
@@ -493,7 +493,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by existing key value returns unexpected status')
         self.assertNotIn(
-            'HS_SECKEY', search_result.content,
+            'HS_SECKEY', search_result.content.decode(),
             'search handle by existing key value gives back HS_SECKEY response')
 
     def test_search_handle_by_prefix_existing_key_value_1(self):
@@ -506,7 +506,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing prefix,key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange(1, limit+1):
+        for x in range(1, limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -525,7 +525,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             'search hrls by existing prefix;xyz,key value returns unexpected status')
         search_result_list = json.loads(search_result.content)
         json_check_list = []
-        for x in xrange(1, limit+1):
+        for x in range(1, limit+1):
             counter = "%06d" % x
             json_check_list.append(self.prefix+'/HRLS_CHECK_HANDLE_'+counter)
         set1 = set(search_result_list)
@@ -543,7 +543,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by existing prefixi,key value returns unexpected status')
         self.assertEqual(
-            search_result.content, '[]',
+            search_result.content.decode(), '[]',
             'search handle by prefixi,existing key value returns unexpected response')
 
     def test_search_handle_by_prefix_existing_key_value_4(self):
@@ -597,7 +597,7 @@ class HrlsIntegrationTests(unittest.TestCase):
             search_result.status_code, 200,
             'search hrls by existing prefixi,key value returns unexpected status')
         self.assertEqual(
-            search_result.content, '{}',
+            search_result.content.decode(), '{}',
             'search handle by prefixi,existing key value returns unexpected response')
 
 if __name__ == "__main__":
