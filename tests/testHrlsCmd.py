@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from testHrlsCmd.hrlsintgtest import HrlsIntegrationTests
 
@@ -16,9 +16,9 @@ if __name__ == '__main__':
 
     if param.script == "hrls":
         # test cases for B2HANDLE-Hrls#
-        print "Test hrls Script"
+        print("Test hrls Script")
         hrls_suite = unittest.TestLoader().loadTestsFromTestCase(HrlsIntegrationTests)
         unittest.TextTestRunner(descriptions=2, verbosity=2).run(hrls_suite)
 
     else:
-        print "Invalid Input; Valid example ./testHrlsCmd -test hrls"
+        print("Invalid Input; Valid example ./testHrlsCmd -test hrls")
