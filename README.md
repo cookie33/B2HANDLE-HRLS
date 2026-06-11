@@ -4,34 +4,34 @@ B2HANDLE-HRLS provides a Java servlet that will enable reverse-lookup and search
 
 ## How to build
 
-This is a Maven-enabled project. To build a .war file, install [Apache Maven](https://maven.apache.org) and then call:
+This is a gradle-enabled project. To build a .war file then call:
 ```
-$ mvn clean
-$ mvn compile
-$ mvn war:war
+$ ./gradlew clean
+$ ./gradlew build
+$ ./gradlew war
 ```
-The .war file will be under subdirectory "target". 
+The .war file will be under subdirectory "build/libs". 
 
-## How to build on Linux 8 (RedHat 8 flavour systems)
-
-This is a Maven-enabled project. To build a .war file, install [Apache Maven](https://maven.apache.org) and then call:
-```
-$ mvn clean   -Denv=linux8
-$ mvn compile -Denv=linux8
-$ mvn war:war -Denv=linux8
-```
-The .war file will be under subdirectory "target". 
 
 This was tested with the following versions and settings:
 ```
-$ mvn --version
-Picked up JAVA_TOOL_OPTIONS: -Dfile.encoding=UTF8
-Apache Maven 3.5.4 (Red Hat 3.5.4-5)
-Maven home: /usr/share/maven
-Java version: 17.0.5, vendor: Red Hat, Inc., runtime: /usr/lib/jvm/java-17-openjdk-17.0.5.0.8-2.el8_6.x86_64
-Default locale: en_US, platform encoding: UTF8
-OS name: "linux", version: "4.18.0-425.3.1.el8.x86_64", arch: "amd64", family: "unix"
+$ ./gradlew --version
+
+------------------------------------------------------------
+Gradle 9.5.1
+------------------------------------------------------------
+
+Build time:    2026-05-12 13:19:42 UTC
+Revision:      fd78213f09782e62ca4957f9cfd3d90c6c3f1767
+
+Kotlin:        2.3.20
+Groovy:        4.0.29
+Ant:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024
+Launcher JVM:  21.0.11 (Red Hat, Inc. 21.0.11+10-LTS)
+Daemon JVM:    /usr/lib/jvm/java-21-openjdk (no Daemon JVM specified, using current Java home)
+OS:            Linux 6.12.0-211.20.1.el10_2.x86_64 amd64
 ```
+It was build on RedHat 10 with java 21 and tested on Java 1.8 and 21.
 
 ## How to deploy (using embedded Handle System v8 (or higher) Jetty)
 
