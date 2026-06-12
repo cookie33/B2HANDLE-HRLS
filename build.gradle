@@ -4,7 +4,7 @@
  * This project uses @Incubating APIs which are subject to change.
  */
 
-
+// plugins
 plugins {
     id 'java'
     id 'java-library'
@@ -13,6 +13,13 @@ plugins {
     id 'war'
 }
 
+// project naming and version. It is build for java 1.8 and higher
+group = 'HandleReverseLookupServlet'
+version = '1.0.13'
+description = 'HandleReverseLookupServlet'
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+// repositories to get libraries from
 repositories {
     mavenCentral()
     mavenLocal()
@@ -23,14 +30,15 @@ repositories {
     }
 }
 
-// Set resources directories to be main directory.
+// Set resources directories to be src/de directory.
 // Gradle excludes *.java files in resource directories by default
 sourceSets {
   main {
-    java { srcDirs = ["src/de"] }    // no source dirs for the java compiler
+    java { srcDirs = ["src/de"] }    // the source dirs for the java compiler
   }
 }
 
+// dependencies. Versions are assigned in gradle/libs.versions.toml
 dependencies {
     api libs.org.glassfish.jersey.core.jersey.server
     api libs.org.glassfish.jersey.containers.jersey.container.servlet
@@ -51,11 +59,6 @@ dependencies {
     api libs.javax.xml.bind.jaxb.api
 }
 
-group = 'HandleReverseLookupServlet'
-version = '1.0.12'
-description = 'HandleReverseLookupServlet'
-java.sourceCompatibility = JavaVersion.VERSION_1_8
-
 publishing {
     publications {
         maven(MavenPublication) {
@@ -64,6 +67,7 @@ publishing {
     }
 }
 
+// war file. To build a war file with teh correct web content and remove a duplicate jar
 war {
     webInf { from 'WebContent/WEB-INF' } // adds a file-set to the WEB-INF dir.
     rootSpec.exclude("**/javax.inject-1.jar")
