@@ -66,4 +66,5 @@ publishing {
 
 war {
     webInf { from 'WebContent/WEB-INF' } // adds a file-set to the WEB-INF dir.
+    rootSpec.exclude("**/javax.inject-1.jar")
 }
