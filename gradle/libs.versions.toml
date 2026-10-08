@@ -3,7 +3,7 @@
 
 [versions]
 com-mchange-c3p0 = "[0.9.5.3,)"
-commons-logging-commons-logging = "1.2"
+commons-logging-commons-logging = "1.3.6"
 jakarta-xml-bind-jakarta-xml-bind-api = "3.0.0"
 jakarta-jws-jakarta-jws-api = "3.0.0"
 javax-activation-javax-activation-api = "1.2.0"
