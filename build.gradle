@@ -40,23 +40,23 @@ sourceSets {
 
 // dependencies. Versions are assigned in gradle/libs.versions.toml
 dependencies {
-    api libs.c3p0
-    api libs.commons.logging
-    api libs.jakarta.jws.api
-    api libs.jakarta.xml.bind.api
-    api libs.javax.activation.api
-    api libs.javax.servlet.api
-    api libs.jaxb.api
-    api libs.jersey.server
-    api libs.jersey.container.servlet
-    api libs.jersey.media.json.jackson
-    api libs.jetty.server
-    api libs.log4j.api
-    api libs.log4j.core
-    api libs.log4j.slf4j.impl
-    api libs.log4j.web
-    api libs.mysql.connector.java
-    api libs.solr.solrj
+    implementation(libs.c3p0)
+    implementation(libs.commons.logging)
+    implementation(libs.jakarta.jws.api)
+    implementation(libs.jakarta.xml.bind.api)
+    implementation(libs.javax.activation.api)
+    implementation(libs.javax.servlet.api)
+    implementation(libs.jaxb.api)
+    implementation(libs.jersey.server)
+    implementation(libs.jersey.container.servlet)
+    implementation(libs.jersey.media.json.jackson)
+    implementation(libs.jetty.server)
+    implementation(libs.log4j.api)
+    implementation(libs.log4j.core)
+    implementation(libs.log4j.slf4j.impl)
+    implementation(libs.log4j.web)
+    implementation(libs.mysql.connector.java)
+    implementation(libs.solr.solrj)
 }
 
 publishing {
