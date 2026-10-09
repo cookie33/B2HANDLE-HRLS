@@ -3,38 +3,35 @@
 
 [versions]
 com-mchange-c3p0 = "[0.9.5.3,)"
-commons-logging-commons-logging = "1.3.6"
-jakarta-xml-bind-jakarta-xml-bind-api = "3.0.0"
-jakarta-jws-jakarta-jws-api = "3.0.0"
-javax-activation-javax-activation-api = "1.2.0"
-javax-servlet-javax-servlet-api = "3.1.0"
-javax-xml-bind-jaxb-api = "2.4.0-b180830.0359"
-mysql-mysql-connector-java = "8.0.28"
-org-apache-logging-log4j-log4j-api = "2.26.0"
-org-apache-logging-log4j-log4j-core = "2.26.0"
-org-apache-logging-log4j-log4j-slf4j-impl = "2.26.0"
-org-apache-logging-log4j-log4j-web = "2.26.0"
-org-apache-solr-solr-solrj = "5.2.1"
-org-eclipse-jetty-jetty-server = "9.4.51.v20230217"
-org-glassfish-jersey-containers-jersey-container-servlet = "2.24"
-org-glassfish-jersey-core-jersey-server = "2.24"
-org-glassfish-jersey-media-jersey-media-json-jackson = "2.24"
+commons-logging = "1.3.6"
+jakarta-jws-api = "3.0.0"
+jakarta-xml-bind-api = "3.0.0"
+javax-activation-api = "1.2.0"
+javax-servlet-api = "3.1.0"
+jaxb-api = "2.4.0-b180830.0359"
+jersey-container-servlet = "2.24"
+jersey-media-json-jackson = "2.24"
+jersey-server = "2.24"
+jetty-server = "9.4.51.v20230217"
+log4j = "2.26.0"
+mysql-connector-java = "8.0.28"
+solr-solrj = "5.2.1"
 
 [libraries]
 com-mchange-c3p0 = { module = "com.mchange:c3p0", version.ref = "com-mchange-c3p0" }
-commons-logging-commons-logging = { module = "commons-logging:commons-logging", version.ref = "commons-logging-commons-logging" }
-jakarta-jws-jakarta-jws-api = { module = "jakarta.jws:jakarta.jws-api", version.ref = "jakarta-jws-jakarta-jws-api" }
-jakarta-xml-bind-jakarta-xml-bind-api = { module = "jakarta.xml.bind:jakarta.xml.bind-api", version.ref = "jakarta-xml-bind-jakarta-xml-bind-api" }
-javax-activation-javax-activation-api = { module = "javax.activation:javax.activation-api", version.ref = "javax-activation-javax-activation-api" }
-javax-servlet-javax-servlet-api = { module = "javax.servlet:javax.servlet-api", version.ref = "javax-servlet-javax-servlet-api" }
-javax-xml-bind-jaxb-api = { module = "javax.xml.bind:jaxb-api", version.ref = "javax-xml-bind-jaxb-api" }
-mysql-mysql-connector-java = { module = "mysql:mysql-connector-java", version.ref = "mysql-mysql-connector-java" }
-org-apache-logging-log4j-log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "org-apache-logging-log4j-log4j-api" }
-org-apache-logging-log4j-log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "org-apache-logging-log4j-log4j-core" }
-org-apache-logging-log4j-log4j-slf4j-impl = { module = "org.apache.logging.log4j:log4j-slf4j-impl", version.ref = "org-apache-logging-log4j-log4j-slf4j-impl" }
-org-apache-logging-log4j-log4j-web = { module = "org.apache.logging.log4j:log4j-web", version.ref = "org-apache-logging-log4j-log4j-web" }
-org-apache-solr-solr-solrj = { module = "org.apache.solr:solr-solrj", version.ref = "org-apache-solr-solr-solrj" }
-org-eclipse-jetty-jetty-server = { module = "org.eclipse.jetty:jetty-server", version.ref = "org-eclipse-jetty-jetty-server" }
-org-glassfish-jersey-containers-jersey-container-servlet = { module = "org.glassfish.jersey.containers:jersey-container-servlet", version.ref = "org-glassfish-jersey-containers-jersey-container-servlet" }
-org-glassfish-jersey-core-jersey-server = { module = "org.glassfish.jersey.core:jersey-server", version.ref = "org-glassfish-jersey-core-jersey-server" }
-org-glassfish-jersey-media-jersey-media-json-jackson = { module = "org.glassfish.jersey.media:jersey-media-json-jackson", version.ref = "org-glassfish-jersey-media-jersey-media-json-jackson" }
+commons-logging = { module = "commons-logging:commons-logging", version.ref = "commons-logging" }
+jakarta-jws-api = { module = "jakarta.jws:jakarta.jws-api", version.ref = "jakarta-jws-api" }
+jakarta-xml-bind-api = { module = "jakarta.xml.bind:jakarta.xml.bind-api", version.ref = "jakarta-xml-bind-api" }
+javax-activation-api = { module = "javax.activation:javax.activation-api", version.ref = "javax-activation-api" }
+javax-servlet-api = { module = "javax.servlet:javax.servlet-api", version.ref = "javax-servlet-api" }
+jaxb-api = { module = "javax.xml.bind:jaxb-api", version.ref = "jaxb-api" }
+jersey-container-servlet = { module = "org.glassfish.jersey.containers:jersey-container-servlet", version.ref = "jersey-container-servlet" }
+jersey-media-json-jackson = { module = "org.glassfish.jersey.media:jersey-media-json-jackson", version.ref = "jersey-media-json-jackson" }
+jersey-server = { module = "org.glassfish.jersey.core:jersey-server", version.ref = "jersey-server" }
+jetty-server = { module = "org.eclipse.jetty:jetty-server", version.ref = "jetty-server" }
+log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4j" }
+log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
+log4j-slf4j-impl = { module = "org.apache.logging.log4j:log4j-slf4j-impl", version.ref = "log4j" }
+log4j-web = { module = "org.apache.logging.log4j:log4j-web", version.ref = "log4j" }
+mysql-connector-java = { module = "mysql:mysql-connector-java", version.ref = "mysql-connector-java" }
+solr-solrj = { module = "org.apache.solr:solr-solrj", version.ref = "solr-solrj" }
