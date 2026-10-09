@@ -40,23 +40,23 @@ sourceSets {
 
 // dependencies. Versions are assigned in gradle/libs.versions.toml
 dependencies {
-    api libs.org.glassfish.jersey.core.jersey.server
-    api libs.org.glassfish.jersey.containers.jersey.container.servlet
-    api libs.org.glassfish.jersey.media.jersey.media.json.jackson
-    api libs.org.eclipse.jetty.jetty.server
-    api libs.org.apache.logging.log4j.log4j.api
-    api libs.org.apache.logging.log4j.log4j.core
-    api libs.org.apache.logging.log4j.log4j.slf4j.impl
-    api libs.org.apache.logging.log4j.log4j.web
-    api libs.commons.logging.commons.logging
-    api libs.mysql.mysql.connector.java
-    api libs.org.apache.solr.solr.solrj
-    api libs.com.mchange.c3p0
-    api libs.jakarta.jws.jakarta.jws.api
-    api libs.jakarta.xml.bind.jakarta.xml.bind.api
-    api libs.javax.activation.javax.activation.api
-    api libs.javax.servlet.javax.servlet.api
-    api libs.javax.xml.bind.jaxb.api
+    api libs.c3p0
+    api libs.commons.logging
+    api libs.jakarta.jws.api
+    api libs.jakarta.xml.bind.api
+    api libs.javax.activation.api
+    api libs.javax.servlet.api
+    api libs.jaxb.api
+    api libs.jersey.server
+    api libs.jersey.container.servlet
+    api libs.jersey.media.json.jackson
+    api libs.jetty.server
+    api libs.log4j.api
+    api libs.log4j.core
+    api libs.log4j.slf4j.impl
+    api libs.log4j.web
+    api libs.mysql.connector.java
+    api libs.solr.solrj
 }
 
 publishing {
