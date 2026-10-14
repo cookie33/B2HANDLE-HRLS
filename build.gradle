@@ -56,6 +56,9 @@ dependencies {
     implementation(libs.log4j.slf4j.impl)
     implementation(libs.log4j.web)
     implementation(libs.mysql.connector.java)
+    implementation(libs.osgi.resource.locator)
+    implementation(libs.protobuf.java)
+    implementation(libs.slf4j.api)
     implementation(libs.solr.solrj)
 }
 
