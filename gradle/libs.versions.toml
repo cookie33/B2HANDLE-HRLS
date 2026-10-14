@@ -14,7 +14,7 @@ jersey-media-json-jackson = "2.24"
 jersey-server = "2.24"
 jetty-server = "9.4.51.v20230217"
 log4j = "2.26.1"
-mysql-connector-java = "8.0.28"
+mysql-connector-j = "9.7.0"
 osgi-resource-locator = "3.0.0"
 protobuf-java = "4.31.1"
 slf4j-api = "1.7.36"
@@ -36,7 +36,7 @@ log4j-api = { module = "org.apache.logging.log4j:log4j-api", version.ref = "log4
 log4j-core = { module = "org.apache.logging.log4j:log4j-core", version.ref = "log4j" }
 log4j-slf4j-impl = { module = "org.apache.logging.log4j:log4j-slf4j-impl", version.ref = "log4j" }
 log4j-web = { module = "org.apache.logging.log4j:log4j-web", version.ref = "log4j" }
-mysql-connector-java = { module = "mysql:mysql-connector-java", version.ref = "mysql-connector-java" }
+mysql-connector-j = { module = "com.mysql:mysql-connector-j", version.ref = "mysql-connector-j" }
 osgi-resource-locator = { module = "org.glassfish.hk2:osgi-resource-locator", version.ref = "osgi-resource-locator" }
 protobuf-java = { module = "com.google.protobuf:protobuf-java", version.ref = "protobuf-java" }
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j-api" }
