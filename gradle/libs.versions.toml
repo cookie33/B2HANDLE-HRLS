@@ -17,7 +17,7 @@ log4j = "2.26.0"
 mysql-connector-java = "8.0.28"
 osgi-resource-locator = "3.0.0"
 protobuf-java = "4.31.1"
-slf4j-api = "2.0.17"
+slf4j-api = "1.7.36"
 solr-solrj = "5.2.1"
 
 [libraries]
